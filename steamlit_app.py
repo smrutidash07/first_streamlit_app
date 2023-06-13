@@ -50,3 +50,6 @@ streamlit.dataframe(my_data_rows)
 #allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('which fruit would you like to add?','jackfruit')
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+#adding fruit to snowflake
+my_cur.execute("insert into fruit_load_list values('from streamlit')");
